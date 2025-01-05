@@ -1,4 +1,3 @@
-// routes/floodRoutes.js
 const express = require('express');
 const router = express.Router();
 const floodController = require('../controllers/floodController');
