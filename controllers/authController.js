@@ -5,7 +5,7 @@ const User = require('../models/userModel'); // Update path sesuai lokasi file u
 // Fungsi untuk register user
 const registerUser = async (req, res) => {
     try {
-        const { username, email, password } = req.body;
+        const { name, email, password } = req.body;
 
         // Cek apakah user sudah ada
         const existingUser = await User.findOne({ email });
@@ -15,7 +15,7 @@ const registerUser = async (req, res) => {
 
         // Buat user baru
         const newUser = new User({
-            username,
+            name,
             email,
             password, // password akan dihash otomatis di model
         });
